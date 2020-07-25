@@ -7,7 +7,6 @@
   <body class="page-body">
     <header class="page-header">
 
-
       <nav class="nav">
         <a class="nav__logo">
           <img src="img/svg/pink.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
@@ -45,6 +44,79 @@
       <section class="page-description">
         <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       </section>
+
+      <form class="form-filter" action="https://echo.htmlacademy.ru" method="GET">
+
+        <fieldset class="form-fio? form__no-border">
+          <legend class="visually-hidden">Введите ваши имя, фамилию, отчесто</legend>
+
+          <label class="form-fio?__label" for="surname-field">Фамилия:</label>
+          <input class="form-fio?__input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required/>
+
+          <label class="form-fio?__label" for="name-field">Имя:</label>
+          <input class="form-fio?__input" type="text" name="surname" id="name-field" placeholder="Введите ваше имя *" required/>
+
+          <label class="form-fio?__label" for="patronymic-field">Отчество:</label>
+          <input class="form-fio?__input" type="text" name="surname" id="patronymic-field" placeholder="Ну и отчество тоже *" required/>
+        </fieldset>
+
+        <fieldset class="form-achievements">
+          <legend class="form-achievements__title">Ваши безбашенные достижения в путешествии</legend>
+
+          <input class="form-achievemenst__input" type="checkbox" name="checkbox" id="checkbox-1" checked required/>
+          <label class="form-achievemenst__label" for="checkbox-1">Сделал селфи с акулой</label>
+
+          <input class="form-achievemenst__input" type="checkbox" name="checkbox" id="checkbox-2" checked required/>
+          <label class="form-achievemenst__label" for="checkbox-2">Обгорел на пляже</label>
+
+          <input class="form-achievemenst__input" type="checkbox" name="checkbox" id="checkbox-3" required/>
+          <label class="form-achievemenst__label" for="checkbox-3">Видел Чака Норриса</label>
+
+          <input class="form-achievemenst__input" type="checkbox" name="checkbox" id="checkbox-4" required/>
+          <label class="form-achievemenst__label" for="checkbox-4">Накупил сувениров</label>
+
+          <input class="form-achievemenst__input" type="checkbox" name="checkbox" id="checkbox-5" checked required/>
+          <label class="form-achievemenst__label" for="checkbox-5">Удержал башню</label>
+
+          <input class="form-achievemenst__input" type="checkbox" name="checkbox" id="checkbox-6" required/>
+          <label class="form-achievemenst__label" for="checkbox-6">Разгромил отель</label>
+
+        </fieldset>
+
+        <fieldset class="form-tel-email">
+          <legend class="visually-hidden"></legend>
+
+          <label class="form-tel-email__label" for="tel-field">Номер телефона</label>
+          <input class="form-tel-email__input" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста"/>
+
+          <label class="form-tel-email__label" for="email-field">Адрес почты</label>
+          <input class="form-tel-email__input" type="email" name="email" id="email-field" placeholder="Введите почту *"/>
+
+        </fieldset>
+
+
+        <fieldset class="form-prog">
+          <legend class="form-prog__title">С каким приложением путешествовали?</legend>
+
+            <input class="form-prog__input" type="radio" name="radio" id="radio-field-1" value="ios"/>
+            <label class="form-prog__label" for="radio-field-1">Pink для iOS</label>
+
+            <input class="form-prog__input" type="radio" name="radio" id="radio-field-2" value="android"/>
+            <label class="form-prog__label" for="radio-field-2">Pink на Android</label>
+
+            <input class="form-prog__input" type="radio" name="radio" id="radio-field-3" value="windows-phone"/>
+            <label class="form-prog__label" for="radio-field-3">Windows Phone</label>
+
+        </fieldset>
+
+
+        <section class="comment">
+          <h2 class="comment__title">Опишите свои эмоции</h2>
+          <textarea class="comment__text" name="comment" rows="10" cols="30">Можно прям в красках, не стесняясь в выражениях</textarea>
+        </section>
+
+        <button class="form-btn btn-green" type="submit" value="Отправить форму">Отправить форму</button>
+      </form>
 
     </main>
 
