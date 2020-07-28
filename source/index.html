@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body class="page-body">
@@ -94,14 +95,66 @@
 
       <section class="review">
         <h2 class="visually-hidden">Отзывы о приложении</h2>
-        <blockquote class="review__item">
-          <div class="review__author-info">
-            <cite class="review__author-name">Николай Петров</cite>
-          </div>
-          <p class="review__author-content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                                      А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-          </p>
-        </blockquote>
+        <ul class="review__list">
+          <li class="review__item">
+            <blockquote class="review__blockqute">
+              <div class="review__author-info">
+                <cite class="review__author-name">Николай Петров</cite>
+              </div>
+              <p class="review__author-content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                                          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </blockquote>
+          </li>
+        </ul>
+      </section>
+
+      <section class="pricing">
+        <h2 class="visually-hidden">Тарифный план</h2>
+        <table class="pricing__table">
+          <tr>
+            <th class="pricing__title"><strong class="visually-hidden">пустая ячейкка</strong></th>
+            <th class="pricing__title"><strong>База</strong><span>1,99 USD</span></th>
+            <th class="pricing__title"><strong>Стандарт</strong><span>3,99 USD</span></th>
+            <th class="pricing__title"><strong>Анлим</strong><span>9,99 USD</span></th>
+          </tr>
+          <tr>
+            <td class="pricing__content">Розовый фильтр</td>
+            <td class="pricing__content" data-pricing-label="Розовый фильтр">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+            <td class="pricing__content" data-pricing-label="Розовый фильтр">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+            <td class="pricing__content" data-pricing-label="Розовый фильтр">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="pricing__content">Смайлики</td>
+            <td class="pricing__content" data-pricing-label="Смайлики">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+            <td class="pricing__content" data-pricing-label="Смайлики">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+            <td class="pricing__content" data-pricing-label="Смайлики">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td class="pricing__content">Коментарии</td>
+            <td class="pricing__content" data-pricing-label="Коментарии">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+            <td class="pricing__content" data-pricing-label="Коментарии">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+            <td class="pricing__content" data-pricing-label="Коментарии">
+              <img src="img/icon-no.svg" alt="">
+            </td>
+          </tr>
+        </table>
       </section>
 
       <section class="feedback">
@@ -112,14 +165,15 @@
         <p class="feedback__maps"><img src="img/bg-map-mobile@1x.png" width="320" height="200" alt="ул. Большая Конюшенная, 19/8"/></p>
       </section>
 
+
     </main>
     <footer class="page-footer-photo">
       <div class="page-footer__logo page-footer__wrapper">
         <a class="page-footer__logo1">
-          <img src="img/" width="" height="" alt=""/>
+          <img src="img/logo-pink-blue-mobile.svg" width="59" height="40" alt="логотип"/>
         </a>
         <a class="page-footer__logo2">
-          <img src="" width="" height="" alt=""/>
+          <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="пинк"/>
         </a>
     </div>
 
