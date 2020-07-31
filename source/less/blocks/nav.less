@@ -1,0 +1,80 @@
+//Навигация
+.nav {
+  background-color: @darkblue;
+}
+
+.nav__inner {
+  min-height: 55px;
+  color: @white;
+
+  @media (min-width: @tablwt-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+  }
+}
+
+.nav__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  height: 69px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.nav__item {
+  padding-top: 17px;
+  padding-bottom: 15px;
+  box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+
+  &:hover,
+  &:focus {
+    background-color: darken(@darkblue, 5%);
+  }
+
+  &:link,
+  &:active {
+    background-color: darken(@darkblue, 15%);
+  }
+}
+
+.nav__link {
+  display: block;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav-btn {
+  @media (min-width: @desktop-width) {
+    display: none;//не работает, почему?
+  }
+}
