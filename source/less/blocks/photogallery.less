@@ -1,0 +1,56 @@
+.photogallery {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.photogallery__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 300px 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 300px 300px 300px;
+  }
+}
+
+.photogallery__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.photogallery__desc {
+  background-color: @grey;
+
+  &-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &-time {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  &-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &-like {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    color: @red;
+  }
+}

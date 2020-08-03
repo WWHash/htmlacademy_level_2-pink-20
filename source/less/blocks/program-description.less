@@ -1,0 +1,46 @@
+.program-description {
+  font-family: "Open Sans", "Arial", sans-serif;
+  background-color: @grey;
+}
+
+.program-description__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.program-description__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-description__item {
+  margin-bottom: 43px;
+}
+
+.program-description__intro {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.program-description__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.program-description__photo-screen {
+  text-align: center;
+}
+
+.program-description__photo-screen > img {
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 547px;
+  }
+}

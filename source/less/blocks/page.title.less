@@ -1,0 +1,105 @@
+.page-title {
+  position: relative;
+  min-height: 667px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  background-color: @blue;
+  background-image: url(../../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    min-height: 666px;
+    background-image: url(../../img/bg-back-tablet@1x.jpg);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url(../../img/bg-back-desktop@1x.jpg);
+  }
+}
+
+.page-title__title {
+  max-width: 280px;
+  margin: 0;
+  margin-bottom: 34px;
+  padding-top: 40px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  color: @white;
+  text-transform: none;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    max-width: 206px;
+    font-size: 40px;
+  }
+}
+
+.page-title__screen {
+  //position: absolute;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 300px;
+  }
+}
+
+.download-app {
+  padding-top: 29px;
+  padding-bottom: 29px;
+  background-color: @blue;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 250px;
+    background-color: transparent;
+  }
+}
+
+.download-app__btn {
+  padding: 15px;
+  margin-bottom: 32px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  border: 3px solid @white;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+.download-app__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 204px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  list-style: none;
+}
+
+.download-app__item {
+  margin-right: 35px;
+}
+
+.download-app__item:nth-child(3) {
+  margin-right: 0;
+}
+
+.download-app__description {
+  width: 280px;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: @white;
+}

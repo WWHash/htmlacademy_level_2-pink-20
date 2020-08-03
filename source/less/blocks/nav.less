@@ -1,0 +1,112 @@
+//Навигация
+.nav {
+  background-color: @blue;
+}
+
+.nav__inner {
+  min-height: 55px;
+  color: @white;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav__logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  height: 69px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-basis: 620px;
+    align-items: center;
+  }
+}
+
+.nav__item {
+  padding-top: 17px;
+  padding-bottom: 15px;
+  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken(@blue, 5%);
+
+    @media (min-width: @desktop-width) {
+      background-color: transparent;
+    }
+  }
+
+  &:link,
+  &:active {
+    background-color: darken(@blue, 15%);
+
+    @media (min-width: @desktop-width) {
+      background-color: transparent;
+    }
+  }
+}
+
+.nav__link {
+  display: block;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: @white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width:@desktop-width) {
+    font-weight: normal;
+    line-height: 18px;
+    text-transform: none;
+
+    &:hover,
+    &:focus {
+      color: @red;
+    }
+
+    &:active {
+      color: fade(@white, 30%);
+    }
+  }
+}
+
+.nav-btn {
+  @media (min-width: @desktop-width) {
+    display: none;//не работает, почему?
+  }
+}

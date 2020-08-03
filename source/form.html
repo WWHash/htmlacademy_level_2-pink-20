@@ -9,29 +9,32 @@
     <header class="page-header">
 
       <nav class="nav">
-        <a class="nav__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
-        </a>
+        <div class="nav__inner container">
+          <div class="nav__logo-wrapper">
+            <a class="nav__logo">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
+            </a>
 
-        <button class="nav__btn" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+            <button class="nav__btn" type="button">кнопка
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
 
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="nav__item nav__item--active">
-            <a class="nav__link">Конкурс</a>
-          </li>
-          <li class="nav__item">
-            <a href="http://htmlacademy.ru">Html Academy</a>
-          </li>
-        </ul>
-
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="nav__item nav__item--active">
+              <a class="nav__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="nav__item ">
+              <a class="nav__link" href="http://htmlacademy.ru">Html Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -48,7 +51,7 @@
 
       <form class="form" action="https://echo.htmlacademy.ru" method="GET">
 
-        <fieldset class="form__fieldset form--no-border">
+        <fieldset class="form__fieldset form__fieldset--no-border">
           <legend class="form__legend visually-hidden">Введите ваши Фамилию, Имя,  Отчество</legend>
           <ul class="form__list">
             <li class="form__item">
@@ -141,36 +144,31 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__logo page-footer__wrapper">
-        <a class="page-footer__logo1">
-          <img src="img/logo-pink-blue-mobile.svg" width="59" height="40" alt=""/>
-        </a>
-        <a class="page-footer__logo2">
-          <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="логотип Пинк"/>
-        </a>
-    </div>
 
-    <div class="social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a href="#"><span class="visually-hidden">Твиттер</span></a>
-        </li>
-        <li class="social__item">
-          <a href="#"><span class="visually-hidden">Фейсбук</span></a>
-        </li>
-        <li class="social__item">
-          <a href="#"><span class="visually-hidden">Ютуб</span></a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link">
-        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="логотип htmlacademy"/>
+      <a class="page-footer__logo">
+        <img src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="логотип пинк"/>
       </a>
-    </div>
 
-  </footer>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--yuo-tube" href="#"><span class="visually-hidden">Ютуб</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__logo">
+          <img src="img/htmlacademy.svg" width="27" height="34" alt="логотип htmlacademy"/>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
