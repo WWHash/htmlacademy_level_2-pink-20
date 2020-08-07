@@ -3,12 +3,12 @@
 }
 
 .form__fieldset {
-  min-width: 90%;
-  margin-bottom: 20px;
+  padding: 20px 0;
+  margin: 0;
   border: none;
 
   @media (min-width: @tablet-width) {
-    border: 2px solid #E5E5E5;
+    border: 2px solid @silver;
     border-radius: 1px;
   }
 }
@@ -32,17 +32,94 @@
 }
 
 .form__legend {
+  margin-bottom: 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: @red;
+  text-align: center;
+}
+
+.form__legend--contact-info {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .form__list {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   list-style: none;
+}
+
+.form__item {
+  margin-bottom: 40px;
+}
+
+.form__input-checkbox {
+  display: none;
+}
+
+.form__label-checkbox {
+  position: relative;
+  padding-left: 60px;
+}
+
+.form__label-checkbox::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 35px;
+  height: 35px;
+  border: 2px solid @silver;
+}
+
+.form__input-checkbox:checked + .form__label-checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  width: 22px;
+  height: 8px;
+  border-top: 2px solid @red;
+  border-right: 2px solid @red;
+  transform: rotate(130deg);
+  content: "";
+}
+
+.form__input-radio {
+  display: none;
+}
+
+.form__label-radio {
+  position: relative;
+  padding-left: 60px;
+}
+
+.form__label-radio::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 37px;
+  border: 2px solid @silver;
+  border-radius: 50%;
+  content: "";
+}
+
+.form__input-radio:checked + .form__label-radio::after {
+  position: absolute;
+  top: 48%;
+  left: 11px;
+  width: 14px;
+  height: 14px;
+  background-color: @red;
+  border: 2px solid @red;
+  border-radius: 50%;
+  content: "";
 }
 
 .label-text {
@@ -54,6 +131,7 @@
 }
 
 .input-text {
+  width: 90%;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

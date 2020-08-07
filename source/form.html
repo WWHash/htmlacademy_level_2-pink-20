@@ -42,14 +42,14 @@
       <h1 class="visually-hidden">Заполните форму</h1>
 
       <section class="page-title">
-        <h2 class="page-title__title">Конкурс на самое безбашенное путешествие с пинк</h2>
+        <h2 class="page-title__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
       </section>
 
-      <section class="page-description">
-        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <section class="page-description page-description--form">
+        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
       </section>
 
-      <form class="form" action="https://echo.htmlacademy.ru" method="GET">
+      <form class="form container" action="https://echo.htmlacademy.ru" method="GET">
 
         <fieldset class="form__fieldset form__fieldset--no-border">
           <legend class="form__legend visually-hidden">Введите ваши Фамилию, Имя,  Отчество</legend>
@@ -69,7 +69,7 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--checkbox">
           <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
           <ul class="form__list">
             <li class="form__item">
@@ -100,7 +100,7 @@
         </fieldset>
 
         <fieldset class="form__fieldset">
-          <legend class="form__legend visually-hidden">Контактная информация</legend>
+          <legend class="form__legend form__legend--contact-info">Контактная информация</legend>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label-text label-text" for="tel-field">Номер телефона</label>
@@ -117,7 +117,7 @@
           <legend class="form__legend">С каким приложением путешествовали?</legend>
           <ul class="form__list">
             <li class="form__item">
-              <input class="form__input-radio input-radio" type="radio" name="radio" id="radio-field-1" value="ios"/>
+              <input class="form__input-radio input-radio" type="radio" name="radio" id="radio-field-1" value="ios" checked/>
               <label class="form__label-radio label-radio" for="radio-field-1">Pink для iOS</label>
             </li>
             <li class="form__item">

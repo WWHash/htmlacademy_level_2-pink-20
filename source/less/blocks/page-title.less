@@ -34,8 +34,30 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    width: 300px;
+    width: 350px;
     font-size: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 535px;
+    font-size: 40px;
+  }
+}
+
+.page-title__title--main {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 240px;
+    font-size: 40px;
+  }
+}
+
+.page-title__title--photo {
+  @media (min-width: @desktop-width) {
+    width: 450px;
   }
 }
 
