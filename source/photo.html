@@ -130,6 +130,33 @@
           </li>
         </ul>
       </section>
+
+      <form class="photo-filter container" action="https://echo.htmlacademy.ru" method="GET">
+        <header class="photo-filter__top">
+          <input class="photo-filter__input-file visually-hidden" id="photo-filter-input-file" type="file"/>
+          <label class="photo-filter__label-file" for="photo-filter-input-file">
+            <img src="img/photo-road-mobile@1x.jpg"/>
+          </label>
+        </header>
+
+        <main class="photo-filter__middle">
+          <div class="photo-filter__labels-wrapper">
+            <label class="photo-filter__label-range" for="photo-filter-input-range-1">1</label>
+            <label class="photo-filter__label-range" for="photo-filter-input-range-2">2</label>
+            <label class="photo-filter__label-range" for="photo-filter-input-range-3">3</label>
+          </div>
+          <div class="photo-filter__inputs-wrapper">
+            <input class="photo-filter__input-range" id="photo-filter-input-range-1" type="range" name="1"/>
+            <input class="photo-filter__input-range" id="photo-filter-input-range-2" type="range" name="2"/>
+            <input class="photo-filter__input-range" id="photo-filter-input-range-3" type="range" name="3"/>
+          </div>
+        </main>
+
+        <footer class="photo-filter__bottom">
+          <button type="submit">Запостить</button>
+          <button type="reset">Отмена</button>
+        </footer>
+      </form>
     </main>
 
     <footer class="page-footer">
