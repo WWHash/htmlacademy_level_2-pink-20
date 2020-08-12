@@ -1,4 +1,38 @@
+.page-description p {
+  padding: 0;
+  margin: 0;
+}
 .page-description {
+  width: 239px;
+  margin: 0 auto;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 214%;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 423px;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 167%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 550px;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 167%;
+  }
+}
+
+.page-description--main {
+  width: 250px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
@@ -8,12 +42,37 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    width: 630px;
     font-size: 40px;
     line-height: 54px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 995px;
     font-size: 50px;
     line-height: 68px;
+  }
+}
+
+.page-description--form {
+  width: 270px;
+
+  @media (min-width: @tablet-width) {
+    width: 540px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 778px;
+  }
+}
+
+.page-description--main p:first-child {
+  margin-bottom: 15px;
+}
+
+.page-description--main p:last-child {
+  @media (min-width: @tablet-width) {
+    width: 423px;
+    margin: 0 auto;
   }
 }

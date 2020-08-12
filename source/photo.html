@@ -11,7 +11,7 @@
       <nav class="nav">
         <div class="nav__inner container">
           <div class="nav__logo-wrapper">
-            <a class="nav__logo">
+            <a class="nav__logo" href="index.html">
               <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
             </a>
 
@@ -42,18 +42,18 @@
       <h1 class="visually-hidden">Фотографии пользователей</h1>
 
       <section class="page-title">
-        <h2 class="page-title__title">Фотографии пользователей</h2>
+        <h2 class="page-title__title page-title__title--photo">Фотографии пользователей</h2>
       </section>
 
       <section class="page-description">
-        <p>Взгляните на фотографии, которые выкладывают пользователи! видите, как не хватает ваших?</p>
+        <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       </section>
 
-      <section class="photogallery">
+      <section class="photogallery container">
         <ul class="photogallery__list">
           <li class="photogallery__item photogallery__item--panarama">
             <div class="photogallery__photo">
-              <img src="img/panorama-mobile@1x.jpg" width="320" height="127" alt="панарамное фото"/>
+              <img src="img/panorama-mobile@1x.jpg" width="100%" height="137" alt="панарамное фото"/>
             </div>
             <div class="photogallery__desc">
               <div class="photogallery__desc-name">Анна
@@ -90,7 +90,7 @@
             </div>
             <div class="photogallery__desc">
               <div class="photogallery__desc-name">Борис
-                <span class="photogallery__desc-time"></span>(20часов назад)</span></div>
+                <span class="photogallery__desc-time">(20часов назад)</span></div>
               <div class="photogallery__desc-text">Здесь могла быть ваша цитата о высоком и вечном.</div>
               <div class="photogallery__desc-like">Нравится: 215</div>
             </div>
@@ -130,9 +130,36 @@
           </li>
         </ul>
       </section>
+
+      <form class="photo-filter container" action="https://echo.htmlacademy.ru" method="GET">
+        <header class="photo-filter__top">
+          <input class="photo-filter__input-file visually-hidden" id="photo-filter-input-file" type="file"/>
+          <label class="photo-filter__label-file" for="photo-filter-input-file">
+            <img src="img/photo-road-mobile@1x.jpg"/>
+          </label>
+        </header>
+
+        <main class="photo-filter__middle">
+          <div class="photo-filter__labels-wrapper">
+            <label class="photo-filter__label-range" for="photo-filter-input-range-1">1</label>
+            <label class="photo-filter__label-range" for="photo-filter-input-range-2">2</label>
+            <label class="photo-filter__label-range" for="photo-filter-input-range-3">3</label>
+          </div>
+          <div class="photo-filter__inputs-wrapper">
+            <input class="photo-filter__input-range" id="photo-filter-input-range-1" type="range" name="1"/>
+            <input class="photo-filter__input-range" id="photo-filter-input-range-2" type="range" name="2"/>
+            <input class="photo-filter__input-range" id="photo-filter-input-range-3" type="range" name="3"/>
+          </div>
+        </main>
+
+        <footer class="photo-filter__bottom">
+          <button type="submit">Запостить</button>
+          <button type="reset">Отмена</button>
+        </footer>
+      </form>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container">
 
       <a class="page-footer__logo">
         <img src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="логотип пинк"/>

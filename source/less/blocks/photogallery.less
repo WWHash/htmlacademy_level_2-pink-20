@@ -3,6 +3,9 @@
 }
 
 .photogallery__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   @media (min-width: @tablet-width) {
     display: grid;
     gap: 20px;
@@ -16,10 +19,16 @@
   }
 }
 
-.photogallery__item {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.photogallery__item--panarama {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 }
 
 .photogallery__desc {
