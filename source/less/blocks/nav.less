@@ -1,5 +1,7 @@
 //Навигация
 .nav {
+  position: relative;
+  width: auto;
   background-color: @blue;
 }
 
@@ -111,8 +113,43 @@
   }
 }
 
-.nav-btn {
+.nav__btn {
+  position: absolute;
+  top: 20px;
+  right: 19px;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
   @media (min-width: @desktop-width) {
-    display: none;//не работает, почему?
+    display: none;
   }
+}
+
+.nav--closed .nav__btn::before {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 50px;
+  height: 3px;
+  content: "";
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff,
+              0 16px 0 0 #ffffff;
+}
+
+.nav--closed .nav__btn:hover::before {
+  background-color: @red;
+  box-shadow: 0 8px 0 0 @red,
+              0 16px 0 0 @red;
+}
+
+.nav--closed .nav__btn:active::before {
+  background-color: @red;
+  box-shadow: 0 8px 0 0 fade(@red, 30%),
+              0 16px 0 0 fade(@red 30%);
 }
