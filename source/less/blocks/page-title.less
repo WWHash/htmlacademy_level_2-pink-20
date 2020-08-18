@@ -1,22 +1,23 @@
 .page-title {
-  margin-bottom: 30px;
+  margin-bottom: 43px;
   background-color: @blue;
-  background-image: url(../../img/bg-back-mobile@1x.jpg);
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: @tablet-width) {
-    background-image: url(../../img/bg-back-tablet@1x.jpg);
+    margin-bottom: 131px;
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url(../../img/bg-back-desktop@1x.jpg);
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
   }
 }
 
 .page-title__inner {
   position: relative;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @font;
   padding-left: 0;
   padding-right: 0;
 }
@@ -24,8 +25,8 @@
 .page-title__title {
   width: 270px;
   margin: 0 auto;
-  padding-bottom: 34px;
-  padding-top: 40px;
+  padding-bottom: 28px;
+  padding-top: 24px;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
@@ -46,6 +47,9 @@
 
 .page-title__title--main {
   @media (min-width: @tablet-width) {
+    width: 247px;
+    padding-top: 92px;
+    padding-left: 46px;
     margin: 0;
   }
 
@@ -63,8 +67,8 @@
 
 .page-title__screen {
   display: block;
-  margin-left: auto;
   margin-right: auto;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     right: 0;
@@ -75,19 +79,23 @@
 .download-app {
   padding-top: 29px;
   padding-bottom: 29px;
-  background-color: @blue;
+  background-color: #1d2631;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     width: 300px;
+    padding-top: 2px;
+    padding-left: 19px;
 
     background-color: transparent;
   }
 }
 
 .download-app__btn {
-  padding: 15px;
-  margin-bottom: 32px;
+  display: table;
+  padding: 15px 36px;
+  margin: 0 auto;
+  margin-bottom: 29px;
   font-family: inherit;
   font-weight: bold;
   font-size: 18px;
@@ -95,10 +103,22 @@
   box-sizing: border-box;
   background-color: transparent;
   color: white;
-  text-align: center;
   border: 3px solid @white;
   border-radius: 28px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @white;
+    color: @red;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 45px;
+    margin-bottom: 46px;
+  }
 }
 
 .download-app__list {
@@ -108,13 +128,16 @@
   align-items: baseline;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 26px;
+  }
 }
 
 .download-app__item {
   margin-right: 35px;
-  margin-bottom: 35px;
 }
 
 .download-app__item:nth-child(3) {
@@ -122,8 +145,16 @@
 }
 
 .download-app__description {
+  width: 250px;
+  margin: 0 auto;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

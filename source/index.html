@@ -8,19 +8,19 @@
   <body class="page-body">
     <header class="page-header">
 
-      <nav class="nav">
+      <nav class="nav nav--closed nav--nojs">
         <div class="nav__inner container">
           <div class="nav__logo-wrapper">
             <a class="nav__logo" href="index.html">
               <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
             </a>
 
-            <button class="nav__btn" type="button">кнопка
+            <button class="nav__btn" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
           </div>
 
-          <ul class="nav__list">
+          <ul class="nav__list nav--opened">
             <li class="nav__item nav__item--active">
               <a class="nav__link">Главная</a>
             </li>
@@ -44,27 +44,35 @@
       <section class="page-title">
         <div class="page-title__inner container">
           <h2 class="page-title__title page-title__title--main">Взгляните на жизнь иначе!</h2>
-          <img class="page-title__screen" src="img/iphone-hand-mobile@1x.png" width="320" height="286" alt="скрин"/>
+          <img class="page-title__screen" src="img/iphone-hand-mobile@1x.png" width="260" height="260" alt="скрин"/>
 
           <section class="download-app">
             <h2 class="visually-hidden">Загрузка приложения</h2>
 
-            <button class="download-app__btn" type="button">Скачать приложения</button>
+            <a class="download-app__btn" href="https://www.apple.com/itunes">Скачать приложение</a>
 
             <ul class="download-app__list">
               <li class="download-app__item">
-                <img src="img/logo-apple.svg" width="47" height="56" alt="логотип apple"/>
+                <a href="https://www.apple.com/ru/ios/app-store/">
+                  <img src="img/logo-apple.svg" width="47" height="56" alt="логотип apple"/>
+                  <span class="visually-hidden">Приложение на iphone</span>
+                </a>
               </li>
               <li class="download-app__item">
-                <img src="img/logo-android.svg" width="43" height="47" alt="логотип android"/>
+                <a href="https://play.google.com/store">
+                  <img src="img/logo-android.svg" width="43" height="47" alt="логотип android"/>
+                  <span class="visually-hidden">Приложение на Android</span>
+                </a>
               </li>
               <li class="download-app__item">
-                <img src="img/logo-microsoft.svg" width="44" height="41" alt="логотип microsoft"/>
+                <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+                  <img src="img/logo-microsoft.svg" width="44" height="41" alt="логотип microsoft"/>
+                  <span class="visually-hidden">Приложение на Windows</span>
+                </a>
               </li>
             </ul>
             <div class="download-app__description">
-              Доступно для IPhone, IPad, Android,
-              <br> Windows phone, OS X, Windows 8
+              Доступно для IPhone, IPad, Android, Windows Phone, OS X, Windows 8
             </div>
           </section>
         </div>
@@ -103,20 +111,70 @@
         </div>
       </section>
 
+      <section class="effect24hours">
+        <div class="effect24hours__inner container">
+          <div class="effect24hours__icon"></div>
+          <div class="effect24hours__wrapper">
+            <h3 class="effect24hours__intro">Эфект на 24 часа!</h3>
+            <p class="effect24hours__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="effect24hours__link" href="#">Узнать больше об исследовании</a>
+          </div>
+        </div>
+      </section>
+
       <section class="review container">
         <h2 class="visually-hidden">Отзывы о приложении</h2>
-        <ul class="review__list">
-          <li class="review__item">
-            <blockquote class="review__blockqute">
-              <div class="review__author-info">
-                <cite class="review__author-name">Николай Петров</cite>
-              </div>
-              <p class="review__author-content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                                          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-              </p>
-            </blockquote>
-          </li>
-        </ul>
+        <input class="review__input review__input--1 visually-hidden" id="slide1" type="radio" name="reviews-toggle" checked>
+        <input class="review__input review__input--2 visually-hidden" id="slide2" type="radio" name="reviews-toggle">
+        <input class="review__input review__input--3 visually-hidden" id="slide3" type="radio" name="reviews-toggle">
+        <div class="review__inner">
+          <ul class="review__list">
+            <li class="review__item">
+              <blockquote class="review__blockqute">
+                <div class="review__author">
+                  <cite class="review__author-name">Николай Петров</cite>
+                  <p class="review__author-info">25 лет, водитель трамвая</p>
+                </div>
+                <p class="review__author-content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                </p>
+              </blockquote>
+            </li>
+            <li class="review__item">
+              <blockquote class="review__blockqute">
+                <div class="review__author">
+                  <cite class="review__author-name">Николай Петров</cite>
+                  <p class="review__author-info">25 лет, водитель трамвая</p>
+                </div>
+                <p class="review__author-content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                </p>
+              </blockquote>
+            </li>
+            <li class="review__item">
+              <blockquote class="review__blockqute">
+                <div class="review__author">
+                  <cite class="review__author-name">Николай Петров</cite>
+                  <p class="review__author-info">25 лет, водитель трамвая</p>
+                </div>
+                <p class="review__author-content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                </p>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+        <div class="review__controls">
+          <label class="review__label" for="slide1"></label>
+          <label class="review__label" for="slide2"></label>
+          <label class="review__label" for="slide3"></label>
+        </div>
+        <button class="review__arrow review__arrow-previos">
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="review__arrow review__arrow-next">
+          <span class="visually-hidden">Следующий</span>
+        </button>
       </section>
 
       <section class="pricing">
@@ -171,13 +229,15 @@
 
       <section class="feedback container">
         <h2 class="feedback__title">Остались вопросы?Свяжитесь с нами!</h2>
-        <p class="feedback__tel">Звоните:<a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a></p>
-        <p class="feedback__email">Пишите:<a href="mailto::mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-        <p class="feedback__location">Приезжайте в гости:<span>ул. Большая Конюшенная, 19/8</span></p>
+        <div class="feedback__wrapper">
+          <p class="feedback__tel">Звоните:<a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a></p>
+          <p class="feedback__email">Пишите:<a href="mailto::mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p class="feedback__location">Приезжайте в гости:<span>ул. Большая Конюшенная, 19/8</span></p>
+        </div>
       </section>
 
       <section class="page-map">
-        <img src="https://via.placeholder.com/320x200" width="320" height="200" alt="ул. Большая Конюшенная, 19/8"/>
+        <iframe class="page-map__yandex" src="https://yandex.ru/map-widget/v1/-/CBBHuHx9TA" frameborder="1" allowfullscreen="true"></iframe>
       </section>
 
     </main>
@@ -208,5 +268,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/nav.js"></script>
   </body>
 </html>

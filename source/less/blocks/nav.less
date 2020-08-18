@@ -1,6 +1,11 @@
 //Навигация
 .nav {
-  background-color: @blue;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-family: @font;
+  background-color: fade(@black, 30%);
+  border: none;
 }
 
 .nav__inner {
@@ -54,31 +59,13 @@
   @media (min-width: @desktop-width) {
     flex-grow: 1;
   }
-
-  &:hover,
-  &:focus {
-    background-color: darken(@blue, 5%);
-
-    @media (min-width: @desktop-width) {
-      background-color: transparent;
-    }
-  }
-
-  &:link,
-  &:active {
-    background-color: darken(@blue, 15%);
-
-    @media (min-width: @desktop-width) {
-      background-color: transparent;
-    }
-  }
 }
 
 .nav__link {
   display: block;
-  padding-top: 17px;
-  padding-bottom: 15px;
-  font-family: "Open Sans", "Arial", sans-serif;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  font-family: @font;
   font-weight: bold;
   font-size: 18px;
   line-height: 32px;
@@ -88,6 +75,11 @@
   text-align: center;
   border-bottom: 1px solid @black;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  &:hover,
+  &:focus {
+    color: @red;
+  }
 
   @media (min-width: @desktop-width) {
     font-weight: normal;
@@ -111,8 +103,96 @@
   }
 }
 
-.nav-btn {
+.nav__btn {
+  position: relative;
+  right: 15px;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
   @media (min-width: @desktop-width) {
-    display: none;//не работает, почему?
+    display: none;
   }
+}
+
+.nav--closed .nav__btn::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 3px;
+  content: "";
+  background-color: @white;
+  box-shadow: 0 8px 0 0 @white,
+              0 16px 0 0 @white;
+}
+
+.nav--closed .nav__btn:hover::before {
+  background-color: @red;
+  box-shadow: 0 8px 0 0 @red,
+              0 16px 0 0 @red;
+}
+
+.nav--closed .nav__btn:active::before {
+  background-color: fade(@red, 30%);
+  box-shadow: 0 8px 0 0 fade(@red, 30%),
+              0 16px 0 0 fade(@red, 30%);
+}
+
+.nav--closed .nav__list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.nav--opened {
+  position: static;
+  background-color: @blue;
+}
+
+.nav--opened .nav__btn {
+  //top: 23px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    content: "";
+    width: 28px;
+    height: 3px;
+    background-color: @white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @red;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@red, 30%);
+  }
+}
+
+.nav--nojs .nav__btn {
+  display: none;
 }
