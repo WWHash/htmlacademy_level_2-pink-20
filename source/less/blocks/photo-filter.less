@@ -1,0 +1,56 @@
+.photo-filter {
+  font-family: @font;
+}
+
+.photo-filter__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.photo-filter__form {
+  display: flex;
+  flex-direction: column;
+  width: calc(40px + 100%);
+  margin-left: -20px;
+  background-color: @grey;
+}
+
+.photo-filter__labels-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-filter__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-filter__bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-filter__button {
+  width: 280px;
+  padding: 15px 89px;
+  margin-bottom: 13px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.photo-filter__button-submit {
+  color:@red;
+  border: 3px solid @red;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @red;
+  }
+}

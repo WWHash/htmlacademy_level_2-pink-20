@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
@@ -12,7 +13,10 @@
         <div class="nav__inner container">
           <div class="nav__logo-wrapper">
             <a class="nav__logo" href="index.html">
-              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/logo-pink-blue-mobile.svg" width="145" height="40">
+                <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
+              </picture>
             </a>
 
             <button class="nav__btn" type="button">
@@ -20,7 +24,7 @@
             </button>
           </div>
 
-          <ul class="nav__list nav--opened">
+          <ul class="nav__list">
             <li class="nav__item nav__item--active">
               <a class="nav__link">Главная</a>
             </li>
@@ -87,38 +91,27 @@
         <div class="program-description__inner container">
           <h2 class="visually-hidden">Описание программы</h2>
 
-          <div class="program-description__wrapper">
-            <ul class="program-description__list">
-              <li class="program-description__item">
-                <h3 class="program-description__intro">Поднимает настроение</h3>
-                <p class="program-description__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              </li>
+          <ul class="program-description__list">
+            <li class="program-description__item">
+              <h3 class="program-description__title">Поднимает настроение</h3>
+              <p class="program-description__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
 
-              <li class="program-description__item">
-                <h3 class="program-description__intro">Меняет мир вокруг</h3>
-                <p class="program-description__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-              </li>
+            <li class="program-description__item">
+              <h3 class="program-description__title">Меняет мир вокруг</h3>
+              <p class="program-description__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
 
-              <li class="program-description__item">
-                <h3 class="program-description__intro">Заводит новых друзей</h3>
-                <p class="program-description__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-              </li>
-            </ul>
-            <div class="program-description__photo-screen">
-              <img src="img/iphone 2.png" width="157" height="320" alt="скирн фото"/>
-            </div>
-          </div>
+            <li class="program-description__item">
+              <h3 class="program-description__title">Заводит новых друзей</h3>
+              <p class="program-description__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
         </div>
-      </section>
-
-      <section class="effect24hours">
-        <div class="effect24hours__inner container">
-          <div class="effect24hours__icon"></div>
-          <div class="effect24hours__wrapper">
-            <h3 class="effect24hours__intro">Эфект на 24 часа!</h3>
-            <p class="effect24hours__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a class="effect24hours__link" href="#">Узнать больше об исследовании</a>
-          </div>
+        <div class="program-description__effect">
+          <h3 class="program-description__title program-description__effect-title">Эфект на 24 часа!</h3>
+          <p class="program-description__text program-description__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="program-description__link" href="#">Узнать больше об исследовании</a>
         </div>
       </section>
 
@@ -180,50 +173,79 @@
       <section class="pricing">
         <div class="pricing__inner container">
           <h2 class="visually-hidden">Тарифный план</h2>
+          <input class="pricing__toggle pricing__toggle-1 visually-hidden" type="radio" name="pricing-toggle" id="price1">
+          <input class="pricing__toggle pricing__toggle-2 visually-hidden" type="radio" name="pricing-toggle" id="price2" checked>
+          <input class="pricing__toggle pricing__toggle-3 visually-hidden" type="radio" name="pricing-toggle" id="price3">
           <table class="pricing__table">
-            <tr>
-              <th class="pricing__title"><strong class="visually-hidden">пустая ячейкка</strong></th>
-              <th class="pricing__title"><strong>База</strong><span>1,99 USD</span></th>
-              <th class="pricing__title"><strong>Стандарт</strong><span>3,99 USD</span></th>
-              <th class="pricing__title"><strong>Анлим</strong><span>9,99 USD</span></th>
-            </tr>
-            <tr>
-              <td class="pricing__content">Розовый фильтр</td>
-              <td class="pricing__content" data-pricing-label="Розовый фильтр">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-              <td class="pricing__content" data-pricing-label="Розовый фильтр">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-              <td class="pricing__content" data-pricing-label="Розовый фильтр">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td class="pricing__content">Смайлики</td>
-              <td class="pricing__content" data-pricing-label="Смайлики">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-              <td class="pricing__content" data-pricing-label="Смайлики">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-              <td class="pricing__content" data-pricing-label="Смайлики">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td class="pricing__content">Коментарии</td>
-              <td class="pricing__content" data-pricing-label="Коментарии">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-              <td class="pricing__content" data-pricing-label="Коментарии">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-              <td class="pricing__content" data-pricing-label="Коментарии">
-                <img src="img/icon-no.svg" alt="">
-              </td>
-            </tr>
+            <thead class="pricing__head">
+              <tr class="pricing__row">
+                <th class="pricing__title pricing__title--empty"></th>
+                <th class="pricing__title pricing__title--base">
+                  <p class="pricing__name">База</p>
+                  <span class="pricing__value">1,99 USD</span>
+                </th>
+                <th class="pricing__title pricing__title--unlim">
+                  <div class="pricing__hit">
+                    <p class="pricing__name">Стандарт</p>
+                    <span class="pricing__value">3,99 USD</span>
+                  </div>
+                </th>
+                <th class="pricing__title pricing__title--unlim">
+                  <p class="pricing__name">Анлим</p>
+                  <span class="pricing__value">9,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="pricing__body">
+              <tr class="pricing__row">
+                <td class="pricing__cell pricing__cell--empty">
+                  <span class="pricing__content">Розовый фильтр</span>
+                </td>
+                <td class="pricing__cell pricing__cell--yes">
+                  <span class="pricing__content">Розовый фильтр</span>
+                </td>
+                <td class="pricing__cell pricing__cell--yes">
+                  <span class="pricing__content">Розовый фильтр</span>
+                </td>
+                <td class="pricing__cell pricing__cell--yes">
+                  <span class="pricing__content">Розовый фильтр</span>
+                </td>
+              </tr>
+              <tr class="pricing__row">
+                <td class="pricing__cell pricing__cell--empty">
+                  <span class="pricing__content">Смайлики</span>
+                </td>
+                <td class="pricing__cell pricing__cell--no">
+                  <span class="pricing__content">Смайлики</span>
+                </td>
+                <td class="pricing__cell pricing__cell--yes">
+                  <span class="pricing__content">Смайлики</span>
+                </td>
+                <td class="pricing__cell pricing__cell--yes">
+                  <span class="pricing__content">Смайлики</span>
+                </td>
+              </tr>
+              <tr class="pricing__row">
+                <td class="pricing__cell pricing__cell--empty">
+                  <span class="pricing__content">Комментарии</span>
+                </td>
+                <td class="pricing__cell pricing__cell--no">
+                  <span class="pricing__content">Комментарии</span>
+                </td>
+                <td class="pricing__cell pricing__cell--no">
+                  <span class="pricing__content">Комментарии</span>
+                </td>
+                <td class="pricing__cell pricing__cell--yes">
+                  <span class="pricing__content">Комментарии</span>
+                </td>
+              </tr>
+            </tbody>
           </table>
+          <div class="pricing__controls">
+            <label class="pricing__label" for="price1"></label>
+            <label class="pricing__label" for="price2"></label>
+            <label class="pricing__label" for="price3"></label>
+          </div>
         </div>
       </section>
 
