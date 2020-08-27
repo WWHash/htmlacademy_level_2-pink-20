@@ -1,5 +1,5 @@
 .page-footer {
-  padding-top: 30px;
+  padding-top: 35px;
   padding-bottom: 30px;
   font-family: @font;
   background-color: @white;
@@ -14,15 +14,17 @@
 .page-footer__logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
 }
 
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  width: 210px;
+  justify-content: center;
   padding: 0;
-  margin: 0 auto;
+  padding-left: 16px;
+  margin: 0;
+  margin-bottom: 21px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -32,15 +34,12 @@
   }
 }
 
-.social__item {
-  margin-right: 14px;
-  margin-bottom: 14px;
-}
-
 .social__link {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
+  margin-right: 14px;
+  margin-bottom: 14px;
   border: 3px solid fade(@blue, 10%);
   border-radius: 50%;
 
@@ -73,6 +72,7 @@
   justify-content: center;
 
   &__text {
+    padding-right: 16px;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;

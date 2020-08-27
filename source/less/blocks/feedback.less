@@ -1,21 +1,23 @@
 .feedback {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
   font-family: @font;
   background-color: @white;
 }
 
 .feedback__title {
-  width: 330px;
+  width: 100%;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
   margin: 0 auto;
+  margin-bottom: 35px;
+  color: @blue;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     width: 374px;
+    margin-bottom: 33px;
     font-style: normal;
     font-weight: 300;
     font-size: 40px;
@@ -32,13 +34,22 @@
 
 .feedback__tel {
   flex-grow: 1;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
 
-  a {
+  & p {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: @blue;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 7px;
+    }
+  }
+
+  & a {
     display: block;
     font-style: normal;
     font-weight: 300;
@@ -51,13 +62,22 @@
 
 .feedback__email {
   flex-grow: 1;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
 
-  a {
+  & p {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: @blue;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 29px;
+    }
+  }
+
+  & a {
     display: block;
     font-style: normal;
     font-weight: 300;
@@ -70,13 +90,18 @@
 
 .feedback__location {
   flex-grow: 2;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
 
-  span {
+  & p {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: @blue;
+    text-align: center;
+  }
+
+  & span {
     display: block;
     font-style: normal;
     font-weight: 300;

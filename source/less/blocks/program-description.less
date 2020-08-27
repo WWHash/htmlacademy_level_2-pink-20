@@ -1,6 +1,13 @@
 .program-description {
-  margin-bottom: 41px;
   background-color: @grey;
+  background-image: url(../../img/bg-triangle-white.svg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+  }
 }
 
 .program-description__inner {
@@ -8,12 +15,19 @@
 }
 
 .program-description__list {
-  padding: 78px 0 287px 0;
+  padding: 79px 0 287px 0;
   margin: 0;
   list-style: none;
   background-image: url(../../img/iphone-screen-mobile@1x.png);
   background-repeat: no-repeat;
   background-position: 50% 109%;
+
+  @media (min-width: @tablet-width) {
+    padding: 79px 0 6px 309px;
+    background-image: url(../../img/iphone-screen-3-tablet@1x.png);
+    background-repeat: no-repeat;
+    background-position: 0 9px;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -22,6 +36,10 @@
 
 .program-description__item {
   margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+  }
 }
 
 .program-description__title {
@@ -30,7 +48,12 @@
   margin-bottom: 12px;
   font-size: 18px;
   line-height: 24px;
+  color: @black;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
 }
 
 .program-description__text {
@@ -39,63 +62,15 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  color: @blue;
   text-align: center;
-}
-
-.program-description__effect {
-  display: none;
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    display: block;
-    width: 620px;
-    padding: 80px 30px 67px 330px;
-    background-color: @white;
+    padding-left: 1px;
+    text-align: left;
 
-    &::before {
-      position: absolute;
-      top: 59px;
-      left: 20px;
-      width: 238px;
-      height: 276px;
-      padding-top: 59px;
-      text-align: center;
-      font-family: @font;
-      font-weight: bold;
-      font-size: 96px;
-      line-height: 163px;
-      color: @red;
-      background-image:
-        url(../../img/icon-editor-diagram-fill.svg),
-        url(../../img/icon-timer.svg);
-      background-repeat: no-repeat, no-repeat;
-      background-position: 50% 75%, 50% 50%;
-      background-size: 202px auto, 238px auto;
-      box-sizing: border-box;
-      content: "24";
+    & span {
+      display: block;
     }
   }
-
-  @media (min-width: @desktop-width) {
-    background-color: @grey;
-  }
-}
-
-.program-description__effect-title {
-  width: 170px;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 36px;
-}
-
-.program-description__effect-text {
-  width: 300px;
-  text-align: left;
-}
-
-.program-description__link {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: @red;
 }

@@ -1,0 +1,81 @@
+.effect24hours {
+  font-family: @font;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @grey;
+  }
+}
+
+.effect24hours__inner {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: block;
+    padding: 80px 30px 67px 330px;
+
+    &::before {
+      position: absolute;
+      top: 39px;
+      left: 20px;
+      width: 238px;
+      height: 276px;
+      padding-top: 71px;
+      text-align: center;
+      font-family: @font;
+      font-weight: bold;
+      font-size: 96px;
+      line-height: 163px;
+      color: @red;
+      background-image:
+        url(../../img/icon-editor-diagram-fill.svg),
+        url(../../img/icon-timer.svg);
+      background-repeat: no-repeat, no-repeat;
+      background-position: 50% 75%, 50% 50%;
+      background-size: 202px auto, 238px auto;
+      box-sizing: border-box;
+      content: "24";
+    }
+  }
+}
+
+.effect24hours__title {
+  width: 170px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 11px;
+
+  & span {
+    display: block;
+  }
+}
+
+
+
+.effect24hours__text {
+  width: 300px;
+  margin: 0;
+  margin-bottom: 9px;
+  font-size: 14px;
+  line-height: 24px;
+  color: @blue;
+  text-align: left;
+
+  & span {
+    display: block;
+  }
+}
+
+.effect24hours__link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: @red;
+}

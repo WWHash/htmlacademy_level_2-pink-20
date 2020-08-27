@@ -9,14 +9,11 @@
   <body class="page-body">
     <header class="page-header">
 
-      <nav class="nav nav--closed nav--nojs">
+      <nav class="nav nav--opened nav--nojs">
         <div class="nav__inner container">
           <div class="nav__logo-wrapper">
             <a class="nav__logo" href="index.html">
-              <picture>
-                <source media="(min-width: 660px)" srcset="img/logo-pink-blue-mobile.svg" width="145" height="40">
-                <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
-              </picture>
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сервиса «Пинк»"/>
             </a>
 
             <button class="nav__btn" type="button">
@@ -48,7 +45,10 @@
       <section class="page-title">
         <div class="page-title__inner container">
           <h2 class="page-title__title page-title__title--main">Взгляните на жизнь иначе!</h2>
-          <img class="page-title__screen" src="img/iphone-hand-mobile@1x.png" width="260" height="260" alt="скрин"/>
+          <picture>
+            <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png">
+            <img class="page-title__screen" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png" width="260" height="260" alt="скрин"/>
+          </picture>
 
           <section class="download-app">
             <h2 class="visually-hidden">Загрузка приложения</h2>
@@ -99,7 +99,7 @@
 
             <li class="program-description__item">
               <h3 class="program-description__title">Меняет мир вокруг</h3>
-              <p class="program-description__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <p class="program-description__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <span>усилить эффект</span></p>
             </li>
 
             <li class="program-description__item">
@@ -108,10 +108,15 @@
             </li>
           </ul>
         </div>
-        <div class="program-description__effect">
-          <h3 class="program-description__title program-description__effect-title">Эфект на 24 часа!</h3>
-          <p class="program-description__text program-description__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a class="program-description__link" href="#">Узнать больше об исследовании</a>
+      </section>
+
+      <section class="effect24hours">
+        <div class="effect24hours__inner">
+          <h3 class="effect24hours__title">Эффект
+            <span>на 24 часа!</span>
+          </h3>
+          <p class="effect24hours__text">Британские ученые провели исследования и доказали, что положительный эффект <span>от использования приложения длится</span> <span>целые сутки!</span></p>
+          <a class="effect24hours__link" href="#">Узнать больше об исследовании</a>
         </div>
       </section>
 
@@ -182,17 +187,17 @@
                 <th class="pricing__title pricing__title--empty"></th>
                 <th class="pricing__title pricing__title--base">
                   <p class="pricing__name">База</p>
-                  <span class="pricing__value">1,99 USD</span>
+                  <p class="pricing__value">1,99 USD</p>
                 </th>
-                <th class="pricing__title pricing__title--unlim">
+                <th class="pricing__title pricing__title--standart">
                   <div class="pricing__hit">
                     <p class="pricing__name">Стандарт</p>
-                    <span class="pricing__value">3,99 USD</span>
+                    <p class="pricing__value">3,99 USD</p>
                   </div>
                 </th>
                 <th class="pricing__title pricing__title--unlim">
                   <p class="pricing__name">Анлим</p>
-                  <span class="pricing__value">9,99 USD</span>
+                  <p class="pricing__value">9,99 USD</p>
                 </th>
               </tr>
             </thead>
@@ -252,9 +257,18 @@
       <section class="feedback container">
         <h2 class="feedback__title">Остались вопросы?Свяжитесь с нами!</h2>
         <div class="feedback__wrapper">
-          <p class="feedback__tel">Звоните:<a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a></p>
-          <p class="feedback__email">Пишите:<a href="mailto::mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          <p class="feedback__location">Приезжайте в гости:<span>ул. Большая Конюшенная, 19/8</span></p>
+          <div class="feedback__tel">
+            <p>Звоните:</p>
+            <a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a>
+          </div>
+          <div class="feedback__email">
+            <p>Пишите:</p>
+            <a href="mailto::mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="feedback__location">
+            <p>Приезжайте в гости:</p>
+            <span>ул. Большая Конюшенная, 19/8</span>
+          </div>
         </div>
       </section>
 

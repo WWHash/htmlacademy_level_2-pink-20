@@ -3,6 +3,11 @@
   flex-direction: column;
   font-family: @font;
   background-color: @white;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 14px;
+  }
 }
 
 .review__inner {
@@ -14,7 +19,7 @@
   width: 300%;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   transform: translateX(0);
   transition: transform 0.3s;
   list-style: none;
@@ -35,11 +40,20 @@
 
 .review__blockqute {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .review__author {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .review__author-name {
@@ -67,7 +81,7 @@
 }
 
 .review__author-content {
-  width: 280px;
+  //width: 280px;
   margin: 0 auto;
   font-style: normal;
   font-weight: normal;
@@ -76,9 +90,10 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    width: 500px;
+    //width: 500px;
     font-size: 18px;
     line-height: 30px;
+    margin-bottom: 36px;
   }
 }
 

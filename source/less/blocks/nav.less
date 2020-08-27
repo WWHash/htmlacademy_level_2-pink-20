@@ -110,8 +110,7 @@
 
 .nav__btn {
   position: relative;
-  right: 18px;
-  bottom: 4px;
+  right: 20px;
   z-index: 2;
   display: block;
   width: 50px;
@@ -165,13 +164,22 @@
 
 .nav--opened {
   position: static;
-  margin-bottom: -67px;
+  margin-bottom: -69px;
   background-color: @blue;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-family: @font;
+    background-color: fade(@black, 30%);
+    border: none;
+    z-index: 1;
+  }
 }
 
 .nav--opened .nav__btn {
-  //top: 23px;
-  right: 15px;
+  right: 17px;
   width: 23px;
   height: 23px;
 
