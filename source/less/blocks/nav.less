@@ -26,6 +26,8 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    padding-right: 130px;
+    padding-left: 130px;
   }
 }
 
@@ -35,6 +37,10 @@
   justify-content: space-between;
   border-bottom: 1px solid @black;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .nav__logo {
@@ -45,6 +51,54 @@
 
   @media (min-width: @tablet-width) {
     height: 110px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.nav__logo {
+  svg {
+    fill: @white;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: @red;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.nav__logo-image {
+  display: none;
+}
+
+.nav__logo-image--mobile {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .nav__logo-image--mobile {
+    display: none;
+  }
+
+  .nav__logo-image--tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nav__logo-image--tablet {
+    display: none;
+  }
+
+  .nav__logo-image--desktop {
+    display: block;
   }
 }
 
@@ -55,14 +109,16 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    flex-basis: 620px;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: ;
   }
 }
 
 .nav__item {
   @media (min-width: @desktop-width) {
     flex-grow: 1;
+    margin-top: 45px;
+    margin-left: 79px;
   }
 }
 
@@ -87,19 +143,35 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
     font-weight: normal;
     line-height: 18px;
     text-transform: none;
     border: none;
     box-shadow: none;
 
+    &--active::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 30px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+    }
+
     &:hover,
     &:focus {
       color: @red;
+      cursor: pointer;
     }
 
     &:active {
       color: fade(@white, 30%);
+      cursor: pointer;
     }
 
     &:visited {
@@ -110,7 +182,7 @@
 
 .nav__btn {
   position: relative;
-  right: 20px;
+  right: 18px;
   z-index: 2;
   display: block;
   width: 50px;
@@ -179,7 +251,6 @@
 }
 
 .nav--opened .nav__btn {
-  right: 17px;
   width: 23px;
   height: 23px;
 

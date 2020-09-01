@@ -6,13 +6,16 @@
   background-position: 50% 1px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 131px;
+    padding-bottom: 83px;
+    margin-bottom: 47px;
     background-image: url("../../img/bg-back-tablet@1x.jpg");
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 124px;
+    margin-bottom: 64px;
     background-image: url("../../img/bg-back-desktop@1x.jpg");
-    background-size: cover;
+    //background-size: cover;
   }
 }
 
@@ -22,13 +25,18 @@
   font-family: @font;
   padding-left: 0;
   padding-right: 0;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 }
 
 .page-title__title {
   width: 270px;
   margin: 0 auto;
   padding-bottom: 28px;
-  padding-top: 92px;
+  padding-top: 90px;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
@@ -44,12 +52,19 @@
   @media (min-width: @desktop-width) {
     width: 535px;
     font-size: 40px;
+    padding: 0;
   }
 }
 
 .page-title__title--main {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
   @media (min-width: @tablet-width) {
     width: 247px;
+    font-size: 40px;
+    line-height: 48px;
     padding-top: 161px;
     padding-left: 46px;
     margin: 0;
@@ -57,7 +72,11 @@
 
   @media (min-width: @desktop-width) {
     width: 240px;
-    font-size: 40px;
+    padding-top: 209px;
+    padding-left: 30px;
+    margin-bottom: 37px;
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
@@ -73,20 +92,25 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
+    top: 141px;
+    left: 3px;
     right: 0;
-    //width: 660px;
-    //height: 545px;
     bottom: 0;
+    width: 660px;
+    height: 545px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 208px;
+    left: 146px;
+    width: 1050px;
+    height: 645px;
   }
 }
 
-.pct {
-  width: 660px;
-  height: 545px;
-}
-
 .download-app {
-  padding-top: 28px;
+  position: relative;
+  padding-top: 27px;
   padding-bottom: 31px;
   background-color: #1d2631;
   text-align: center;
@@ -97,6 +121,9 @@
     padding-left: 19px;
 
     background-color: transparent;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
@@ -128,6 +155,13 @@
     padding: 15px 45px;
     margin-bottom: 46px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 28px;
+    margin-bottom: 66px;
+    font-size: 21px;
+    line-height: 18px;
+  }
 }
 
 .download-app__list {
@@ -142,6 +176,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 47px;
   }
 }
 
