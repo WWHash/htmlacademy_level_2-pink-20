@@ -1,24 +1,25 @@
 .page-title {
-  margin-bottom: 42px;
+  margin-bottom: 44px;
   background-color: @blue;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 1px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 83px;
-    margin-bottom: 47px;
+    padding-bottom: 84px;
+    margin-bottom: 90px;
     background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-position: 50% -43px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 124px;
+    padding-bottom: 90px;
     margin-bottom: 64px;
     background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-position: 50% 1px;
     //background-size: cover;
   }
 }
-
 
 .page-title__inner {
   position: relative;
@@ -33,30 +34,28 @@
 }
 
 .page-title__title {
-  width: 270px;
-  margin: 0 auto;
-  padding-bottom: 28px;
-  padding-top: 90px;
+  padding: 96px 30px 77px 30px;
+  margin: 0;
   font-weight: 300;
   font-size: 24px;
-  line-height: 120%;
+  line-height: 33px;
   color: @white;
   text-transform: none;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    width: 350px;
-    font-size: 40px;
+    padding: 133px 40px 45px 40px;
+    font-size: 50px;
+    line-height: 68px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 535px;
-    font-size: 40px;
-    padding: 0;
+    padding: 169px 300px 0 300px;
   }
 }
 
 .page-title__title--main {
+  padding: 90px 10px 27px 10px;
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
@@ -74,7 +73,7 @@
     width: 240px;
     padding-top: 209px;
     padding-left: 30px;
-    margin-bottom: 37px;
+    margin-bottom: 10px;
     font-size: 50px;
     line-height: 68px;
   }
@@ -93,8 +92,6 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 141px;
-    left: 3px;
-    right: 0;
     bottom: 0;
     width: 660px;
     height: 545px;
@@ -102,7 +99,6 @@
 
   @media (min-width: @desktop-width) {
     top: 208px;
-    left: 146px;
     width: 1050px;
     height: 645px;
   }
@@ -110,7 +106,7 @@
 
 .download-app {
   position: relative;
-  padding-top: 27px;
+  padding-top: 29px;
   padding-bottom: 31px;
   background-color: #1d2631;
   text-align: center;

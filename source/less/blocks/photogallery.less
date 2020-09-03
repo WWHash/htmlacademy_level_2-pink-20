@@ -1,5 +1,6 @@
 .photogallery {
   font-family: @font;
+  margin-bottom: 23px;
 }
 
 .photogallery__list {
@@ -20,7 +21,29 @@
   }
 }
 
+.photogallery__item {
+  margin-bottom: 20px;
+}
+
 .photogallery__item:first-child {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    padding: 6px 0;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    color: @white;
+    background: @red;
+    text-align: center;
+    text-transform: uppercase;
+    content: "Панорама дня";
+  }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -36,6 +59,9 @@
   width: calc(40px + 100%);
   margin-left: -20px;
 
+  @media (min-width: @tablet-width) {
+  }
+
   @media (min-width: @desktop-width) {
     width: calc(280px + 100%);
     margin-left: -140px;
@@ -44,14 +70,46 @@
 
 .photogallery__photo {
   width: 280px;
+  height: auto;
 
   @media (min-width: @tablet-width) {
     width: 300px;
   }
 }
 
+.photogallery__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.photogallery__item:first-child img {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 660px;
+    height: 509px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 506px;
+  }
+}
+
 .photogallery__desc {
-  padding: 0 17px;
+  padding: 18px 0 18px 17px;
   background-color: @grey;
 
   @media (min-width: @tablet-width) {
@@ -74,9 +132,11 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 24px;
+    text-transform: uppercase;
   }
 
   &-text {
+    margin-bottom: 11px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -84,10 +144,25 @@
   }
 
   &-like {
+    position: relative;
+    padding-left: 32px;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 24px;
     color: @red;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 13px;
+      height: 12px;
+      background-image: url(../../img/icon-heart.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      content: "";
+    }
   }
 }
