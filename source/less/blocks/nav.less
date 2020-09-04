@@ -143,6 +143,10 @@
     color: @red;
   }
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @desktop-width) {
     position: relative;
     padding-top: 0;
@@ -152,6 +156,10 @@
     text-transform: none;
     border: none;
     box-shadow: none;
+
+    &:active {
+      color: @white;
+    }
 
     &--active::after {
       content: "";

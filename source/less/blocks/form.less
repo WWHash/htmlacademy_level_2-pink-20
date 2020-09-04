@@ -134,14 +134,21 @@
   width: 35px;
   height: 35px;
   border: 2px solid @silver;
-
-  &:hover,
-  &:focus {
-    border-color: @blue;
-  }
 }
 
-.form__input-checkbox:checked + .form__label-checkbox::after {
+.form__label-checkbox:hover::before {
+  border: 2px solid @blue;
+}
+
+.form__label-checkbox:focus::before {
+  border: 2px solid @blue;
+}
+
+.form__label-checkbox:active::before {
+  border: 2px solid @red;
+}
+
+.form__input-checkbox:checked ~ .form__label-checkbox::after {
   position: absolute;
   top: 50%;
   left: 9px;
@@ -167,14 +174,21 @@
   border: 2px solid @silver;
   border-radius: 50%;
   content: "";
-
-  &:hover,
-  &:focus {
-    border-color: @blue;
-  }
 }
 
-.form__input-radio:checked + .form__label-radio::after {
+.form__label-radio:hover::before {
+  border: 2px solid @blue;
+}
+
+.form__label-radio:focus::before {
+  border: 2px solid @blue;
+}
+
+.form__label-radio:active::before {
+  border: 2px solid @red;
+}
+
+.form__input-radio:checked ~ .form__label-radio::after {
   position: absolute;
   top: 48%;
   left: 11px;
@@ -226,5 +240,9 @@
   &:hover,
   &:focus {
     border-color: @blue;
+  }
+
+  &:active {
+    border-color: @red;
   }
 }
