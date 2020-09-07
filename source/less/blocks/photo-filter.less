@@ -85,6 +85,9 @@
 
 .photo-filter__label-file {
   display: block;
+  picture {
+    width: 100%;
+  }
 
   img {
     display: block;
@@ -132,7 +135,7 @@
   }
 
   .photo-filter__left {
-    flex-basis: 280px;
+    flex-basis: 300px;
   }
 
   .photo-filter__right {
@@ -216,7 +219,14 @@
 
 @media (min-width: @desktop-width) {
 
+  .photo-filter {
+    margin-bottom: 61px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
   .photo-filter__form {
+    padding-top: 53px;
     padding-left: 80px;
     padding-right: 40px;
     padding-bottom: 57px;
