@@ -1,20 +1,33 @@
-.page-description p {
-  padding: 0;
-  margin: 0;
-}
-
 .page-description {
-  width: 239px;
-  margin: 0 auto;
-  font-family: @font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 214%;
-  text-align: center;
+  padding-top: 4px;
+  margin-bottom: 50px;
 
   @media (min-width: @tablet-width) {
-    width: 423px;
+    padding-top: 43px;
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
+    margin-bottom: 89px;
+  }
+}
+
+.page-description p {
+  padding: 0 34px;
+  margin: 0 auto;
+  font-family: @font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+
+  & span {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 80px;
     margin-bottom: 30px;
     font-style: normal;
     font-weight: normal;
@@ -23,9 +36,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 550px;
+    padding: 0 300px;
     margin-bottom: 30px;
-    font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 167%;
@@ -33,29 +45,53 @@
 }
 
 .page-description--main {
-  width: 250px;
-  font-family: @font;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 120%;
-  background-color: @white;
-  color: @blue;
-  text-align: center;
-  margin-bottom: 115px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
-    width: 630px;
-    font-size: 40px;
-    line-height: 54px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 995px;
-    font-size: 50px;
-    line-height: 68px;
+    margin-bottom: 53px;
   }
 }
 
+.page-description__text--main {
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  background-color: @white;
+  color: @blue;
+  text-align: center;
+
+  &:first-child {
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: @tablet-width) {
+      font-size: 40px;
+      line-height: 54px;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        padding: 0 113px;
+      }
+  }
+
+  @media (min-width: @desktop-width) {
+      font-size: 50px;
+      line-height: 68px;
+
+      &:last-child {
+        padding: 0 150px;
+      }
+  }
+}
+/*
 .page-description--form {
   width: 270px;
 
@@ -67,18 +103,4 @@
     width: 778px;
   }
 }
-
-.page-description--main p:first-child {
-  margin-bottom: 30px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-  }
-}
-
-.page-description--main p:last-child {
-  @media (min-width: @tablet-width) {
-    width: 423px;
-    margin: 0 auto;
-  }
-}
+*/
