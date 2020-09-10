@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body class="page-body">
@@ -128,9 +128,10 @@
         </div>
       </section>
 
-      <section class="page-description--main container">
-        <p class="page-description__text--main">Устали от серости мегаполиса?</p>
-        <p class="page-description__text--main">Нам есть, что вам предложить!</p>
+      <section class="page-description page-description--main container">
+        <h2 class="page-description__title page-description__title--main">Устали от серости мегаполиса?
+          <span>Нам есть, что вам предложить!</span>
+        </h2>
       </section>
 
       <section class="program-description">
@@ -156,13 +157,16 @@
         </div>
       </section>
 
-      <section class="effect24hours">
-        <div class="effect24hours__inner">
-          <h3 class="effect24hours__title">Эффект
-            <span>на 24 часа!</span>
-          </h3>
-          <p class="effect24hours__text">Британские ученые провели исследования и доказали, что положительный эффект <span>от использования приложения длится</span> <span>целые сутки!</span></p>
-          <a class="effect24hours__link" href="#">Узнать больше об исследовании</a>
+      <section class="effect">
+        <div class="effect__inner container">
+          <div class="effect__icon"></div>
+          <div class="effect__content">
+            <h2 class="effect__title">Эффект
+              <span>на 24 часа!</span>
+            </h2>
+            <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект <span>от использования приложения длится</span> <span>целые сутки!</span></p>
+            <a class="effect__link" href="#">Узнать больше об исследовании</a>
+          </div>
         </div>
       </section>
 
@@ -307,7 +311,7 @@
         <div class="feedback__wrapper">
           <div class="feedback__tel">
             <p>Звоните:</p>
-            <a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a>
+            <a href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
           </div>
           <div class="feedback__email">
             <p>Пишите:</p>
@@ -321,7 +325,8 @@
       </section>
 
       <section class="page-map">
-        <iframe class="page-map__yandex" src="https://yandex.ru/map-widget/v1/-/CBBHuHx9TA" frameborder="1" allowfullscreen="true"></iframe>
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe class="page-map__yandex" src="https://yandex.ru/map-widget/v1/-/CBBHuHx9TA"></iframe>
       </section>
 
     </main>

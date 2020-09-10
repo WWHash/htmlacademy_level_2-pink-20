@@ -1,11 +1,23 @@
 .button-green {
-  padding: 20px 0;
+  padding: 14px 0;
   margin-bottom: 46px;
   text-transform: uppercase;
   background-color: @bg-btn;
   border: 2px solid @bg-btn;
   border-radius: 1px;
   color: @white;
+
+  &:hover,
+  &:focus {
+    background: @bg-btn-hover;
+    border: 2px solid @bg-btn-hover;
+  }
+
+  &:active {
+    background: @bg-btn-hover;
+    border: 2px solid @bg-btn-hover;
+    color: fade(@white, 30%);
+  }
 }
 
 .btn {

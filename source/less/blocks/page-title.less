@@ -1,29 +1,52 @@
 .page-title {
   margin-bottom: 40px;
   background-color: @blue;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 1px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 84px;
     margin-bottom: 47px;
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: 50% -43px;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 90px;
     margin-bottom: 64px;
-    background-image: url("../../img/bg-back-desktop@1x.jpg");
-    background-position: 50% 1px;
-    //background-size: cover;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 50% 11px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+    }
   }
 }
 
 .page-title--main {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 4px;
+  }
+
   @media (min-width: @desktop-width) {
     padding-bottom: 125px;
+    margin-bottom: 36px;
+  }
+}
+
+.page-title--form {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 59px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 45px;
+    margin-bottom: 65px;
   }
 }
 
@@ -91,6 +114,21 @@
   }
 }
 
+.page-title__title--form {
+  padding: 96px 30px 44px 30px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 134px 30px 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 747px;
+    padding: 169px 0 44px 0;
+    margin: 0 auto;
+  }
+}
+
 .page-title__screen {
   display: block;
   margin-right: auto;
@@ -119,11 +157,11 @@
 
   @media (min-width: @tablet-width) {
     width: 300px;
-    padding-top: 2px;
+    padding-top: 4px;
     padding-left: 19px;
-
     background-color: transparent;
   }
+
   @media (min-width: @desktop-width) {
     padding: 0;
   }

@@ -37,6 +37,11 @@
   justify-content: space-between;
   border-bottom: 1px solid @black;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+  }
 
   @media (min-width: @desktop-width) {
     border: none;
@@ -49,18 +54,6 @@
   height: 69px;
   padding-left: 20px;
 
-  @media (min-width: @tablet-width) {
-    height: 110px;
-    padding-left: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: -7px;
-    padding-left: 0;
-  }
-}
-
-.nav__logo {
   svg {
     fill: @white;
   }
@@ -72,6 +65,16 @@
 
   &:active svg {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -7px;
+    padding-left: 0;
   }
 }
 
@@ -111,7 +114,6 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: ;
   }
 }
 
@@ -156,10 +158,6 @@
     text-transform: none;
     border: none;
     box-shadow: none;
-
-    &:active {
-      color: @white;
-    }
 
     &--active::after {
       content: "";
@@ -214,8 +212,7 @@
   height: 4px;
   content: "";
   background-color: @white;
-  box-shadow: 0 10px 0 0 @white,
-              0 20px 0 0 @white;
+  box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
 }
 
 .nav--closed .nav__logo-wrapper {
@@ -224,14 +221,12 @@
 
 .nav--closed .nav__btn:hover::before {
   background-color: @red;
-  box-shadow: 0 10px 0 0 @red,
-              0 20px 0 0 @red;
+  box-shadow: 0 10px 0 0 @red, 0 20px 0 0 @red;
 }
 
 .nav--closed .nav__btn:active::before {
   background-color: fade(@red, 30%);
-  box-shadow: 0 10px 0 0 fade(@red, 30%),
-              0 20px 0 0 fade(@red, 30%);
+  box-shadow: 0 10px 0 0 fade(@red, 30%), 0 20px 0 0 fade(@red, 30%);
 }
 
 .nav--closed .nav__list {
